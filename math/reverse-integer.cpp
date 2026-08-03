@@ -11,6 +11,6 @@ public:
             temp /= 10;
         }
 
-        return (ans > INT_MAX) ? 0 : (int)ans;
+        return (ans >= INT_MAX || ans <= INT_MIN) ? 0 : (int)ans;
     }
 };
