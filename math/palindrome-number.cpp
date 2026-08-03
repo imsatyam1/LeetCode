@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int reverseNum(int x)
+    long long reverseNum(int x)
     {
-        int newNum = 0;
+        long long newNum = 0;
 
         while(x != 0)
         {
@@ -17,8 +17,8 @@ public:
     bool isPalindrome(int x) {
         if(x < 0) return false;
 
-        int newNum = reverseNum(x);
-        if(newNum <= INT_MIN || newNum >= INT_MAX) return false;
+        long long newNum = reverseNum(x);
+        if(newNum <= INT_MIN || newNum >= INT_MAX) return 0;
 
         return x == newNum;
     }
