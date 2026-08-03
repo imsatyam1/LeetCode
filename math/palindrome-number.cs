@@ -18,6 +18,7 @@ public class Solution {
         if(x < 0) return false;
 
         int newNum = reverseNum(x);
+        if(newNum <= int.MinValue || newNum >= int.MaxValue) return false;
 
         return x == newNum;
     }
