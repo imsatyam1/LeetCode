@@ -15,13 +15,6 @@ public:
             else vote--;
         }
 
-        vote = 0;
-
-        for(int num: nums)
-        {
-            if(num == candidate) vote++;
-        }
-
-        return (vote >n/2)? candidate : vote;
+        return candidate;
     }
 };
