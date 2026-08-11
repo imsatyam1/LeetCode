@@ -16,7 +16,6 @@ public:
             }
         }
 
-        maxSum = max(maxSum, currSum);
         return maxSum;
     }
 };
