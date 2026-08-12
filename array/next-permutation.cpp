@@ -18,9 +18,8 @@ public:
 
         for(int i=n-1; i>flag; i--)
         {
-            if(nums[i] > nums[flag])
-            {
-                swap(nums[flag], nums[i]);
+            if (nums[i] > nums[flag]) {
+                swap(nums[i], nums[flag]);
                 break;
             }
         }
