@@ -20,7 +20,7 @@ public:
         {
             if(nums[i] > nums[flag])
             {
-                swap(nums[flag], nums[n-1]);
+                swap(nums[flag], nums[i]);
                 break;
             }
         }
