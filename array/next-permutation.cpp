@@ -16,7 +16,7 @@ public:
             return;
         }
 
-        for(int i=n-1; i>=flag; i--)
+        for(int i=n-1; i>flag; i--)
         {
             if(nums[i] > nums[flag])
             {
