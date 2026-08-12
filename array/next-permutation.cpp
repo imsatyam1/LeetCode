@@ -16,7 +16,14 @@ public:
             return;
         }
 
-        swap(nums[flag], nums[n-1]);
+        for(int i=n-1; i>=flag; i--)
+        {
+            if(nums[i] > nums[flag])
+            {
+                swap(nums[flag], nums[n-1]);
+                break;
+            }
+        }
 
         reverse(nums.begin()+flag+1, nums.end());
     }
