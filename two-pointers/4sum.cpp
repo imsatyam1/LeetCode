@@ -13,7 +13,7 @@ public:
 
                 while(left < right)
                 {
-                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    long long sum = nums[i] + nums[j] + nums[left] + nums[right];
 
                     if(sum == target)
                     {
