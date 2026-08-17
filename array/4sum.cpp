@@ -13,7 +13,7 @@ public:
 
                 while(left < right)
                 {
-                    long long sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    long long sum = 1LL * (nums[i] + nums[j] + nums[left] + nums[right]);
 
                     if(sum == target)
                     {
