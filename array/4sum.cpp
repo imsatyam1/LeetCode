@@ -13,8 +13,10 @@ public:
 
                 while(left < right)
                 {
-                    long long sum;
-                    sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    long long sum = nums[i];
+                    sum += nums[j];
+                    sum += nums[left];
+                    sum += nums[right];
 
                     if(sum == target)
                     {
