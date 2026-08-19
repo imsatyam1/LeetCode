@@ -12,10 +12,10 @@ public:
             if(nums[mid] == target)
             {
                 int temp = mid;
-                while(temp >= -1 && nums[temp] == target) temp--;
+                while(temp >= 0 && nums[temp] == target) temp--;
                 ans[0] = temp+1;
                 temp = mid;
-                while(temp <= n+1 && nums[temp] == target) temp++;
+                while(temp < n && nums[temp] == target) temp++;
                 ans[1] = temp-1;
                 return ans;
             }
