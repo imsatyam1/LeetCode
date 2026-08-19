@@ -9,6 +9,13 @@ public:
             int mid = start + (end-start)/2;
 
             if(nums[mid] == target) return true;
+
+            if((nums[start] == nums[mid]) && (nums[mid] == nums[end])){
+                start++;
+                end--;
+                continue;
+            }
+            
             else if(nums[start] <= nums[mid])
             {
                 if(nums[start] <= target && target < nums[mid]) end  = mid-1;
