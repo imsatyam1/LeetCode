@@ -19,7 +19,6 @@ public:
         int low = 1;
         int high = *max_element(nums.begin(), nums.end());
 
-        if(n == 1) return nums[0];
         if(threshold == n) return high;
 
         while(low < high)
