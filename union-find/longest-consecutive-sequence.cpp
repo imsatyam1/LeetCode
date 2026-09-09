@@ -8,7 +8,7 @@ public:
             st.insert(nums[i]);
         }
 
-        int maxLength = 1; 
+        int maxLength = 0; 
 
         for(auto &it: st)
         {
