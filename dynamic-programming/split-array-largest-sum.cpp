@@ -16,7 +16,7 @@ class Solution {
             }
         }
 
-        return count <= k;
+        return count == k;
     }
 
 public:
