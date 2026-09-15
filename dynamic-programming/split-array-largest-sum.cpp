@@ -16,12 +16,12 @@ class Solution {
             }
         }
 
-        return count == k;
+        return count <= k;
     }
 
 public:
     int splitArray(vector<int>& nums, int k) {
-        int low = 0;
+        int low = *max_element(nums.begin(), nums.end());
         int high = accumulate(nums.begin(), nums.end(), 0);
 
         if(k == 1) return high;
