@@ -12,7 +12,7 @@ public:
 
             if(s[0] != ans[0]) return "";
 
-            while(s[i] == ans[i]) i++;
+            while(i< s.size() && s[i] == ans[i]) i++;
 
             ans = ans.substr(0, i);
         }
