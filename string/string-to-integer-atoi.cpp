@@ -21,6 +21,14 @@ public:
             if(isdigit(s[i]))
             {
                 int digit = s[i] - '0';
+
+                if (sum > (INT_MAX - digit) / 10) {
+                if (sign == 1)
+                    return INT_MAX;
+                else
+                    return INT_MIN;
+            }
+
                 sum = sum*10 + digit;
                 i++;
             }
@@ -29,9 +37,6 @@ public:
                 break;
             }
         }
-
-        if(sign * sum < INT_MIN) return INT_MIN;
-        if(sign * sum > INT_MAX) return INT_MAX;
 
         return (int)sum*sign;
     }
