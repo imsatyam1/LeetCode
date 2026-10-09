@@ -1,10 +1,10 @@
-# Write your MySQL query statement below
-select 
-p.firstName as firstName, 
-p.lastName as lastName, 
+/* Write your T-SQL query statement below */
+SELECT 
+p.firstname as firstName, 
+p.lastname as lastName, 
 a.city as city,
 a.state as state
 
-from Person p
+FROM Person p
 left Join Address a
 on p.personId = a.personId;
