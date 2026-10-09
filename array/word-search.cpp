@@ -1,0 +1,38 @@
+class Solution {
+    vector<pair<int, int>> directions{{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+
+    bool DFS(vector<vector<char>> &board, int i, int j, string &word, int index)
+    {
+        if(index == word.length()) return true;
+
+        if(i<0 || i>= board.size() || j<0 || j>=board[0].size() || board[i][j] == '$' || board[i][j] != word[index]) return false;
+
+        char ch = board[i][j];
+        board[i][j] = '$';
+
+        for(auto &dir: directions)
+        {
+            int x = dir.first + i;
+            int y = dir.second + j;
+
+            if(DFS(board, x, y, word, index+1)) return true;
+        }
+
+        board[i][j] = ch;
+        return false;
+    }
+
+public:
+    bool exist(vector<vector<char>>& board, string word) {
+        
+        for(int i=0; i<board.size(); i++)
+        {
+            for(int j=0; j<board[0].size(); j++)
+            {
+                if(board[i][j] == word[0] && DFS(board, i, j, word, 0)) return true;
+            }
+        }
+
+        return false;
+    }
+};

@@ -4,9 +4,9 @@ public:
         int maxCount = 0;
         int count = 0;
 
-        for(int i: nums)
+        for(int i=0; i<nums.size(); i++)
         {
-            if(i == 1) count++;
+            if(nums[i] == 1)count++;
             else
             {
                 maxCount = max(maxCount, count);
@@ -14,7 +14,6 @@ public:
             }
         }
 
-        maxCount = max(maxCount, count);
-        return maxCount;
+        return max(maxCount, count);
     }
 };
